@@ -7,6 +7,6 @@ routes = Blueprint('routes', __name__)
 def index():
     return render_template('index.html')
 
-@routes.route('login')
+@routes.route('/login')
 def login():
     return render_template('login.html')
