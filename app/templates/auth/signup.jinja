@@ -1,0 +1,15 @@
+{% extends "base.jinja" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<h2 class="text-xl font-bold mb-4">Register</h2>
+<form method="POST" class="space-y-4">
+    <input name="name" type="text" placeholder="Full Name" class="border rounded p-2 w-full">
+    <input name="email" type="email" placeholder="Email" class="border rounded p-2 w-full">
+    <input name="password" type="password" placeholder="Password" class="border rounded p-2 w-full">
+    <select name="role" class="border rounded p-2 w-full">
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+    </select>
+    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Register</button>
+</form>
+{% endblock %}
