@@ -1,0 +1,10 @@
+{% extends "base.jinja" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h2 class="text-xl font-bold mb-4">Login</h2>
+<form method="POST" class="space-y-4">
+    <input name="email" type="email" placeholder="Email" class="border rounded p-2 w-full">
+    <input name="password" type="password" placeholder="Password" class="border rounded p-2 w-full">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+</form>
+{% endblock %}
