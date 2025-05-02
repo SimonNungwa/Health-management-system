@@ -1,0 +1,9 @@
+{% extends "base.jinja" %}
+{% block title %}Patient Dashboard{% endblock %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Hello, {{ current_user.name }}</h2>
+<ul class="space-y-2">
+    <li><a href="{{ url_for('patient.book_appointment') }}" class="text-blue-600">Book Appointment</a></li>
+    <li><a href="{{ url_for('patient.medical_records') }}" class="text-blue-600">View Medical Records</a></li>
+</ul>
+{% endblock %}
