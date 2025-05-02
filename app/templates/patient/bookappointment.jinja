@@ -1,0 +1,15 @@
+{% extends "base.jinja" %}
+{% block title %}Book Appointment{% endblock %}
+{% block content %}
+<h2 class="text-xl font-bold mb-4">Book an Appointment</h2>
+<form method="POST" class="space-y-4">
+    <select name="doctor" class="border rounded p-2 w-full">
+        {% for doc in doctors %}
+            <option value="{{ doc.id }}">{{ doc.name }} ({{ doc.specialty }})</option>
+        {% endfor %}
+    </select>
+    <input name="date" type="date" class="border rounded p-2 w-full">
+    <input name="time" type="time" class="border rounded p-2 w-full">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Book</button>
+</form>
+{% endblock %}
