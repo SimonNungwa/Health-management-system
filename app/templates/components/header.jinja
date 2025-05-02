@@ -1,0 +1,12 @@
+<nav class="bg-white shadow p-4 mb-6 flex justify-between">
+    <a href="{{ url_for('public.homepage') }}" class="font-bold text-xl">HealthCare</a>
+    <div>
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('dashboard.user_dashboard') }}" class="mr-4">Dashboard</a>
+            <a href="{{ url_for('auth.logout') }}" class="text-red-500">Logout</a>
+        {% else %}
+            <a href="{{ url_for('auth.login') }}" class="mr-4">Login</a>
+            <a href="{{ url_for('auth.register') }}" class="bg-blue-500 text-white px-2 py-1 rounded">Register</a>
+        {% endif %}
+    </div>
+</nav>
