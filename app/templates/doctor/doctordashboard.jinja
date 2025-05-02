@@ -1,0 +1,9 @@
+{% extends "base.jinja" %}
+{% block title %}Doctor Dashboard{% endblock %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Welcome Dr. {{ current_user.name }}</h2>
+<ul class="space-y-2">
+    <li><a href="{{ url_for('doctor.schedule_management') }}" class="text-blue-600">Manage Schedule</a></li>
+    <li><a href="{{ url_for('doctor.patient_list') }}" class="text-blue-600">My Patients</a></li>
+</ul>
+{% endblock %}
